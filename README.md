@@ -21,6 +21,10 @@
 
 now training...
 
+## Book
+
+https://techbookfest.org/product/5743005264773120
+
 ## References
 
 [WaveNet](https://arxiv.org/abs/1609.03499)
