@@ -23,7 +23,10 @@ now training...
 
 ## Book
 
-https://techbookfest.org/product/5743005264773120
+![4a948f86-b96f-42ea-927f-14232d57589c_base_resized](https://user-images.githubusercontent.com/33972190/76142884-428b6480-60b5-11ea-9272-968022e42c75.jpg)  
+
+https://techbookfest.org/product/5743005264773120  
+https://otakuassembly.booth.pm/items/1834753  
 
 ## References
 
