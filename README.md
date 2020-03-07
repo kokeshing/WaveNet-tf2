@@ -17,7 +17,7 @@
    python synthesize.py [input_path] [output_path] [weight_path]
 ```
 
-## Weights
+## Pretrained model / Result
 
 now training...
 
