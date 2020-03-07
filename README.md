@@ -44,8 +44,8 @@ https://otakuassembly.booth.pm/items/1834753
 
 論文。
 
-[r9y9/wavenet_vocoder](https://github.com/r9y9/wavenet_vocoder)
-[LESS IS MORE/WaveNet vocoder をやってみましたので、その記録です](https://r9y9.github.io/blog/2018/01/28/wavenet_vocoder/)
+[r9y9/wavenet_vocoder](https://github.com/r9y9/wavenet_vocoder)  
+[LESS IS MORE/WaveNet vocoder をやってみましたので、その記録です](https://r9y9.github.io/blog/2018/01/28/wavenet_vocoder/)  
 
 いくつもの論文で使われている実装。PyTorch。
 
