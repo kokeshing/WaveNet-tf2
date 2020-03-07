@@ -4,6 +4,16 @@
 
 ## Train
 
+### Library
+
+```
+tensorflow
+numpy
+librosa
+scipy
+```
+
+
 ```bash=
    ls wavs/*.wav | tail -n+10 > train_files.txt
    ls wavs/*.wav | head -n10 > test_files.txt
@@ -23,10 +33,10 @@ now training...
 
 ## Book
 
-![4a948f86-b96f-42ea-927f-14232d57589c_base_resized](https://user-images.githubusercontent.com/33972190/76142918-7feff200-60b5-11ea-9569-0423f8bb3fe9.jpg)  
+![4a948f86-b96f-42ea-927f-14232d57589c_base_resized](https://user-images.githubusercontent.com/33972190/76142918-7feff200-60b5-11ea-9569-0423f8bb3fe9.jpg)
 
-https://techbookfest.org/product/5743005264773120  
-https://otakuassembly.booth.pm/items/1834753  
+https://techbookfest.org/product/5743005264773120
+https://otakuassembly.booth.pm/items/1834753
 
 ## References
 
@@ -34,7 +44,7 @@ https://otakuassembly.booth.pm/items/1834753
 
 論文。
 
-[r9y9/wavenet_vocoder](https://github.com/r9y9/wavenet_vocoder)  
+[r9y9/wavenet_vocoder](https://github.com/r9y9/wavenet_vocoder)
 [LESS IS MORE/WaveNet vocoder をやってみましたので、その記録です](https://r9y9.github.io/blog/2018/01/28/wavenet_vocoder/)
 
 いくつもの論文で使われている実装。PyTorch。
