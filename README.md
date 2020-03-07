@@ -23,7 +23,11 @@ now training...
 
 ## References
 
-[r9y9/wavenet_vocoder](https://github.com/r9y9/wavenet_vocoder)
+[WaveNet](https://arxiv.org/abs/1609.03499)
+
+論文。
+
+[r9y9/wavenet_vocoder](https://github.com/r9y9/wavenet_vocoder)  
 [LESS IS MORE/WaveNet vocoder をやってみましたので、その記録です](https://r9y9.github.io/blog/2018/01/28/wavenet_vocoder/)
 
 いくつもの論文で使われている実装。PyTorch。
@@ -39,3 +43,11 @@ WaveNetに関する知見が纏められている。
 [Synthesize Human Speech with WaveNet](https://chainer-colab-notebook.readthedocs.io/ja/latest/notebook/official_example/wavenet.html)
 
 Colabを用いた解説。Chainer。
+
+[The LJ Speech Dataset](https://keithito.com/LJ-Speech-Dataset/)
+
+英語の単一話者のデータセット。
+
+[JSUT](https://sites.google.com/site/shinnosuketakamichi/publication/jsut)
+
+日本語の単一話者のデータセット。
