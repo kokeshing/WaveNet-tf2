@@ -27,9 +27,12 @@ scipy
    python synthesize.py [input_path] [output_path] [weight_path]
 ```
 
-## Pretrained model / Result
+## Result
 
-now training...
+The 1-day training model synsthesis result is below:
+<img width="782" alt="0001" src="https://user-images.githubusercontent.com/33972190/76222682-45758900-625e-11ea-843a-c9957e44ee57.png">
+
+pre trained model link is still a little way off.
 
 ## Book
 
