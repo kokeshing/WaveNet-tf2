@@ -6,7 +6,6 @@ import os
 from model.wavenet import WaveNet
 from model.module import CrossEntropyLoss
 from dataset import get_train_data
-from utils import files_to_list, load_wav, melspectrogram, inv_mulaw_quantize
 import hparams
 
 
@@ -45,25 +44,6 @@ def train():
     else:
         step = 0
 
-    test_files = files_to_list(hparams.test_files)
-    test_mels = []
-    for i in range(hparams.n_test_samples):
-        wav = load_wav(test_files[i], hparams.sampling_rate)
-        wav_len = wav.shape[0]
-        if wav_len > hparams.sampling_rate * 2:
-            sample_num = hparams.sampling_rate * 2 - hparams.sampling_rate * 2 % hparams.hop_size
-        else:
-            sample_num = wav_len - wav_len % hparams.hop_size
-
-        wav = wav[:sample_num]
-        mel_sp = melspectrogram(wav, hparams.sampling_rate, hparams.num_mels,
-                                n_fft=hparams.n_fft, hop_size=hparams.hop_size, win_size=hparams.win_size)
-        test_mels.append(mel_sp)
-
-        wav = tf.convert_to_tensor(wav, dtype=tf.float32)
-        with summary_writer.as_default():
-            tf.summary.audio(f'origin_{i}', tf.reshape(wav, [1, -1, 1]), hparams.sampling_rate, step=0)
-
     for epoch in range(hparams.epoch):
         train_data = get_train_data()
         for x, mel_sp, y in train_data:
@@ -73,19 +53,7 @@ def train():
 
             step += 1
 
-        if step % hparams.gen_interval == 0:
-            for i, mel_sp in enumerate(test_mels):
-                mel_sp = tf.expand_dims(mel_sp, axis=0)
-                wavenet.init_queue()
-                outputs = wavenet.synthesis(mel_sp)
-                outputs = np.squeeze(outputs)
-                outputs = inv_mulaw_quantize(outputs)
-                outputs = tf.convert_to_tensor(outputs, dtype=tf.float32)
-                with summary_writer.as_default():
-                    tf.summary.audio(f'generate_{i}', tf.reshape(outputs, [1, -1, 1]),
-                                     hparams.sampling_rate, step=step)
-
-        if step % hparams.save_interval == 0:
+        if epoch % hparams.save_interval == 0:
             print(f'Step {step}, Loss: {loss}')
             np.save(hparams.result_dir + f"weights/step.npy", np.array(step))
             wavenet.save_weights(hparams.result_dir + f"weights/wavenet_{epoch:04}")
